@@ -8,7 +8,18 @@ const SearchResultList = (props) => {
     const search_results = props.items.map((item) => {
        return <SearchResult key={item.id} item={item} />
     });
-    return <div className="ui cards">{search_results}</div>;
+    return (
+      <div>
+        { props.items.length > 0 &&
+          <div>
+            Found {props.items.length} restaurants. 
+          </div>
+        }
+        <div className="ui cards">
+          {search_results}
+        </div>
+      </div>
+    )
   }
 }
 

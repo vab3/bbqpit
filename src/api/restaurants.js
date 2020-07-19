@@ -15479,6 +15479,9 @@ function search(searchTerm) {
   return retVal;
 };
 
+export function find_by_id(id) {
+  return restaurants.find(restaurant => restaurant.id == id);
+}
 
 
 export default search;
